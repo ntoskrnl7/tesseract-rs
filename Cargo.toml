@@ -1,15 +1,19 @@
 [package]
-name          = "tesseract"
-version       = "0.9.0"
-authors       = ["Kevin Kwok <antimatter15@gmail.com>", "Chris Couzens <ccouzens@gmail.com>"]
+name = "tesseract"
+version = "0.9.2"
+authors = [
+    "Kevin Kwok <antimatter15@gmail.com>",
+    "Chris Couzens <ccouzens@gmail.com>",
+    "Jung-Kwang Lee <ntoskrnl7@gmail.com>",
+]
 documentation = "https://docs.rs/tesseract"
-repository    = "https://github.com/antimatter15/tesseract-rs"
-description   = "Higher-level bindings for Tesseract OCR"
-license       = "MIT"
-keywords      = ["tesseract", "OCR", "bindings"]
-categories    = ["api-bindings", "multimedia::images"]
+repository = "https://github.com/antimatter15/tesseract-rs"
+description = "Higher-level bindings for Tesseract OCR"
+license = "MIT"
+keywords = ["tesseract", "OCR", "bindings"]
+categories = ["api-bindings", "multimedia::images"]
 
 [dependencies]
-tesseract-sys = "0.5.3"
-tesseract-plumbing = "0.3.0"
+tesseract-plumbing = { git = "https://github.com/ntoskrnl7/tesseract-plumbing", branch = "main" }
+tesseract-sys = { git = "https://github.com/ntoskrnl7/tesseract-sys" }
 thiserror = "1.0"
